@@ -2,8 +2,6 @@
 angular.module('starter.services', [])
 
     .factory('Books', function() {
-        // Might use a resource here that returns a JSON array
-
         // Some fake testing data
         var books = [
             {
@@ -17,7 +15,8 @@ angular.module('starter.services', [])
                 publisher   : {
                     name: 'dpunkt.verlag',
                     url : 'http://dpunkt.de/'
-                }
+                },
+                bookStatus: 'shelf'
             },
             {
                 title       : 'Node.js & Co.',
@@ -30,7 +29,8 @@ angular.module('starter.services', [])
                 publisher   : {
                     name: 'dpunkt.verlag',
                     url : 'http://dpunkt.de/'
-                }
+                },
+                bookStatus: 'borrow'
             },
             {
                 title       : 'CoffeeScript',
@@ -43,7 +43,8 @@ angular.module('starter.services', [])
                 publisher   : {
                     name: 'dpunkt.verlag',
                     url : 'http://dpunkt.de/'
-                }
+                },
+                bookStatus: 'sold'
             }
         ];
 
@@ -61,6 +62,33 @@ angular.module('starter.services', [])
                     }
                 }
                 return null;
+            },
+            getBorrowed: function() {
+                return books.filter(function(book) {
+                    return (book.bookStatus === 'borrow');
+                });
+            },
+            lendBook: function(book) {
+                // change the Status of this book to
+                book.bookStatus='borrow';
+            },
+            putBack: function(book) {
+                // change the Status of this book to
+                book.bookStatus='shelf';
+            },
+            sellBook: function(book) {
+                // change the Status of this book to
+                book.bookStatus='sold';
+            },
+            getSold: function() {
+                return books.filter(function(book) {
+                    return (book.bookStatus === 'sold');
+                });
+            },
+            getOnShelf: function() {
+                return books.filter(function(book) {
+                    return (book.bookStatus === 'shelf');
+                });
             }
         };
     });

@@ -1,0 +1,28 @@
+<ion-view view-title="all Books">
+    <ion-nav-title>
+        <h1 class="title">all Books</h1>
+    </ion-nav-title>
+    <ion-content>
+
+        <ion-list ng-repeat="(key, value) in books | groupBy: 'bookStatus'">
+
+            <div class="item item-divider item-positive">
+                Status: {{key}}
+            </div>
+
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="book in value"
+                      type="item-text-wrap" href="#/tab/books/{{book.isbn}}">
+                <img ng-src="{{book.cover}}">
+
+                <h2>{{book.title}}</h2>
+
+                <p>{{book.subtitle}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+
+                <ion-option-button class="button-assertive" ng-click="remove(book)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

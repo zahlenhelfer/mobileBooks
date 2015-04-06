@@ -1,8 +1,39 @@
 <ion-view view-title="{{book.title}}">
   <ion-content class="padding">
-    <img ng-src="{{book.cover}}" style="width: 64px; height: 64px">
-    <p>
-      {{book.abstract}}
-    </p>
+      <div class="list card">
+
+          <div class="item">
+              <h2>{{book.title}}</h2>
+              <h3>{{book.subtitle}}</h3>
+              <img src="{{book.cover}}">
+              <p>Pages: {{book.numPages}}</p>
+              <p>Publisher: {{book.publisher.name}}</p>
+              <p>ISBN: {{book.isbn}}</p>
+          </div>
+
+          <div class="item item-body">
+                  {{book.abstract}}
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+              <a class="tab-item" ng-click="sellBook(book)">
+                  <i class="icon ion-cash"></i>
+                  sell the book
+              </a>
+              <a class="tab-item" ng-click="lendBook(book)">
+                  <i class="icon ion-share"></i>
+                  lend it to a friend
+              </a>
+              <a class="tab-item" ng-click="remove(book)">
+                  <i class="icon ion-trash-a"></i>
+                  delete the book
+              </a>
+          </div>
+
+      </div>
+
   </ion-content>
 </ion-view>
+
+
+
