@@ -25,15 +25,15 @@ angular.module('starter')
                     }
                 }
             })
-        .state('app.ontheshelf-detail', {
-            url: '/ontheshelf/:bookIsbn',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/book-detail.html',
-                    controller: 'BookDetailCtrl'
+            .state('app.ontheshelf-detail', {
+                url: '/ontheshelf/:bookIsbn',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/book-detail.html',
+                        controller: 'BookDetailCtrl'
+                    }
                 }
-            }
-        })
+            })
 
             .state('app.borrowed', {
                 url: "/borrowed",
@@ -53,16 +53,24 @@ angular.module('starter')
                     }
                 }
             })
-        .state('app.all', {
-            url: "/all",
-            views: {
-                'menuContent': {
-                    templateUrl: "templates/allBooks.html",
-                    controller: 'BookListCtrl'
+            .state('app.camera', {
+                url: "/camera",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/cover-gallery.html",
+                        controller: 'cameraCtrl'
+                    }
                 }
-            }
-        });
-
+            })
+            .state('app.all', {
+                url: "/all",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/allBooks.html",
+                        controller: 'BookListCtrl'
+                    }
+                }
+            });
 
 
         // if none of the above states are matched, use this as the fallback
