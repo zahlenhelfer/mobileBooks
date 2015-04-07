@@ -1,0 +1,14 @@
+<ion-popover-view>
+    <ion-header-bar class="bar bar-header bar-energized">
+        <h1 class="title">Attention deleting a book</h1>
+    </ion-header-bar>
+    <ion-content>
+        are you sure deleting the book &quot;{{ book.title }}&quot;?
+        <button class="button button-block button-assertive"
+                ng-click="deleteBook(book.isbn)">delete
+        </button>
+        <button class="button button-block button-calm"
+                ng-click="closePopover()">abort
+        </button>
+    </ion-content>
+</ion-popover-view>

@@ -62,6 +62,15 @@ angular.module('starter')
                     }
                 }
             })
+            .state('app.newbook', {
+                url: "/newbook",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/book-new.html",
+                        controller: 'newBookCtrl'
+                    }
+                }
+            })
             .state('app.all', {
                 url: "/all",
                 views: {

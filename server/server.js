@@ -191,7 +191,7 @@ app.get('/api/books/:isbn', function (req, res) {
     }
 });
 
-app.get('/api/books/:status', function (req, res) {
+app.get('/api/booksbystatus/:status', function (req, res) {
     var book = SERVER.getBooksByStatus(req.params.status);
 
     if (book) {

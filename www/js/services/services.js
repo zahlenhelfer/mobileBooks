@@ -38,7 +38,7 @@ angular.module('starter.services', [])
 
         srv.getBooksByStatus = function (status) {
             return $http.get(
-                srv._baseUrl + '/api/books/' + status
+                srv._baseUrl + '/api/booksbystatus/' + status
             );
         };
 
@@ -81,6 +81,12 @@ angular.module('starter.services', [])
                 return srv.storeBook(book);
             },
             updateBook: function (book) {
+                return srv.updateBook(book);
+            },
+            sellBook:function (book){
+                return srv.updateBook(book);
+            },
+            lendBook:function (book){
                 return srv.updateBook(book);
             },
             getSoldBooks: function () {

@@ -3,6 +3,12 @@
         <h1 class="title">all Books</h1>
     </ion-nav-title>
     <ion-content>
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search">
+            </label>
+        </div>
 
         <ion-list ng-repeat="(key, value) in books | groupBy: 'bookStatus'">
 
