@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa70e671-bede-402d-b985-27c83e4dd2b7" name="Default" comment="re-refactor some filenames">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/BookDetailCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/BookDetailCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/BookList.html" afterPath="$PROJECT_DIR$/www/templates/BookList.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/BookListCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/BookListCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/BooksBorrowedCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/BooksBorrowedCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/BooksOnShelfCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/BooksOnShelfCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/CameraCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/CameraCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/GpsCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/GpsCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/config/Router.js" afterPath="$PROJECT_DIR$/www/js/config/Router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/SideMenu.html" afterPath="$PROJECT_DIR$/www/templates/SideMenu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bookMobile.iws" />
@@ -32,11 +25,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Router.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Router.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/config/Router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8169014">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/BookList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.827586">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookListCtrl.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/controller/BookListCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43661973">
+              <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -100,8 +113,9 @@
         <option value="$PROJECT_DIR$/www/js/controller/GpsCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/config/Router.js" />
         <option value="$PROJECT_DIR$/www/js/controller/BookDetailCtrl.js" />
-        <option value="$PROJECT_DIR$/www/js/controller/BookListCtrl.js" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/www/templates/BookList.html" />
+        <option value="$PROJECT_DIR$/www/js/controller/BookListCtrl.js" />
       </list>
     </option>
   </component>
@@ -393,7 +407,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428955460362</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="re-refactor some filenames">
+      <created>1428956345842</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1428956345842</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -765,26 +785,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/BookListCtrl.js">
+    <entry file="file://$PROJECT_DIR$/www/js/config/Router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/BookList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34188035">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state vertical-scroll-proportion="-4.827586">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/config/Router.js">
+    <entry file="file://$PROJECT_DIR$/www/js/controller/BookListCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8169014">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.43661973">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding />
         </state>
       </provider>
