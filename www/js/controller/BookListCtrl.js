@@ -20,12 +20,14 @@ angular.module('bookMonkeyMobile')
       });
     };
 
-    $scope.remove = function (book) {
-      BookDataService.remove(book).then(function (res) {
-        $scope.books.slice(book);
-        $state.go('app.ontheshelf');
+    $scope.removeBook = function (book) {
+      // backend api-call as promise
+      BookDataService.deleteBookByIsbn(book.isbn).then(function () {
+        // remove from $scope-model
+        $scope.books.splice($scope.books.indexOf(book), 1);
       }, function (error) {
         $log.log('An error occurred!', error);
       });
     };
+
   });

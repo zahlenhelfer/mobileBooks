@@ -16,7 +16,7 @@ angular.module('bookMonkeyMobile').controller('BooksOnShelfCtrl', function ($sco
 
   $scope.remove = function (book) {
     // backend api-call as promise
-    BookDataService.deleteBookByIsbn(isbn).then(function () {
+    BookDataService.deleteBookByIsbn(book.isbn).then(function () {
       // remove from $scope-model
       $scope.books.splice($scope.books.indexOf(book), 1);
     }, function (error) {
