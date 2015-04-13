@@ -2,37 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa70e671-bede-402d-b985-27c83e4dd2b7" name="Default" comment="refactor several filenames and structure">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/controller/GpsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/controller/_CameraCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/controller/_NewBookCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/config/_Router.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/config/router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/controller/BooksSoldCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/controller/SettingsCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/controller/_controllers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/controller/cameraCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/controller/newBookCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/router/router.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/templates/sold.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/templates/tab-books.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/templates/tab-dash.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/templates/tab-settings.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/templates/tabs.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/js/services/services.js" afterPath="$PROJECT_DIR$/www/js/services/BookDataService.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/templates/allBooks.html" afterPath="$PROJECT_DIR$/www/templates/BookList.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/templates/book-detail.html" afterPath="$PROJECT_DIR$/www/templates/BookDetail.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/templates/book-new.html" afterPath="$PROJECT_DIR$/www/templates/NewBook.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/templates/borrowed.html" afterPath="$PROJECT_DIR$/www/templates/BooksBorrowed.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/templates/cover-gallery.html" afterPath="$PROJECT_DIR$/www/templates/CoverGallery.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/templates/ontheshelf.html" afterPath="$PROJECT_DIR$/www/templates/BooksOnShelf.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/templates/popover-delete-book.html" afterPath="$PROJECT_DIR$/www/templates/PopoverDeleteBook.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/www/templates/side-menu.html" afterPath="$PROJECT_DIR$/www/templates/SideMenu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/BookDetailCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/BookDetailCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/BookListCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/BookListCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/BooksBorrowedCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/BooksBorrowedCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controller/BooksOnShelfCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/BooksOnShelfCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/www/js/config/_Router.js" afterPath="$PROJECT_DIR$/www/js/config/Router.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/www/js/controller/_CameraCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/CameraCtrl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/www/js/controller/_NewBookCtrl.js" afterPath="$PROJECT_DIR$/www/js/controller/NewBookCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -85,8 +57,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_Router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/config/_Router.js">
+      <file leaf-file-name="Router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/config/Router.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
@@ -443,7 +415,13 @@
       <option name="project" value="LOCAL" />
       <updated>1428445653421</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor several filenames and structure">
+      <created>1428955417742</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1428955417742</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -464,13 +442,13 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277849" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277849" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -536,7 +514,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/_CameraCtrl.js">
+    <entry file="file://$PROJECT_DIR$/www/js/controller/CameraCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
@@ -548,6 +526,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -606,7 +585,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/config/_Router.js">
+    <entry file="file://$PROJECT_DIR$/www/js/config/Router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
@@ -658,6 +637,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29850745">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +710,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/_CameraCtrl.js">
+    <entry file="file://$PROJECT_DIR$/www/js/controller/CameraCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
@@ -770,7 +750,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controller/_NewBookCtrl.js">
+    <entry file="file://$PROJECT_DIR$/www/js/controller/NewBookCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04032258">
           <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
@@ -810,7 +790,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/config/_Router.js">
+    <entry file="file://$PROJECT_DIR$/www/js/config/Router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
