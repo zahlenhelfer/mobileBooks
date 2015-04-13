@@ -8,11 +8,15 @@
                 on-refresh="doRefresh()">
         </ion-refresher>
 
-        <div class="list list-inset">
-            <label class="item item-input">
+        <div id="search-box" class="bar bar-header item-input-inset">
+            <div class="item-input-wrapper">
                 <i class="icon ion-search placeholder-icon"></i>
-                <input type="text" placeholder="Search">
-            </label>
+                <input type="search" placeholder="Search" ng-model="data.searchQuery">
+                <i class="clear-search icon ion-ios-close-empty" ng-click="clearSearch()"></i>
+            </div>
+            <button class="button button-clear" ng-click="clearSearch()">
+                Cancel
+            </button>
         </div>
 
         <ion-list ng-repeat="(key, value) in books | groupBy: 'bookStatus'">
@@ -21,7 +25,8 @@
                 Status: {{key}}
             </div>
 
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="book in value"
+            <ion-item class="item-remove-animate item-avatar item-icon-right"
+                      ng-repeat="book in value | filter:data.searchQuery"
                       type="item-text-wrap" href="#/tab/books/{{book.isbn}}">
                 <img ng-src="{{book.cover}}">
 

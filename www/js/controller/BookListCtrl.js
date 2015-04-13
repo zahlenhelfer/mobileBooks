@@ -30,4 +30,9 @@ angular.module('bookMonkeyMobile')
       });
     };
 
+    $scope.data = {};
+    $scope.clearSearch = function () {
+      $scope.data.searchQuery = '';
+    };
+
   });
