@@ -1,4 +1,6 @@
-angular.module('bookMonkeyMobile').controller('cameraCtrl', function ($scope, $log, $cordovaCamera, $cordovaFile) {
+"use strict";
+angular.module('bookMonkeyMobile')
+  .controller('cameraCtrl', function ($scope, $log, $cordovaCamera, $cordovaFile) {
 // 1
   $scope.images = [];
 

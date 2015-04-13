@@ -1,4 +1,6 @@
-angular.module('bookMonkeyMobile').controller('GpsCtrl', function ($cordovaGeolocation, $log) {
+"use strict";
+angular.module('bookMonkeyMobile')
+  .controller('GpsCtrl', function ($cordovaGeolocation, $log) {
   var posOptions = {timeout: 10000, enableHighAccuracy: false};
   $cordovaGeolocation
     .getCurrentPosition(posOptions)

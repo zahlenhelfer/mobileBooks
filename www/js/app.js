@@ -1,6 +1,6 @@
 // Ionic Starter App
 'use strict';
-angular.module('bookMonkeyMobile', ['ngCordova', 'ionic'])
+angular.module('bookMonkeyMobile', ['ngCordova', 'ionic', 'angular.filter'])
   .run(function ($ionicPlatform, $rootScope, $log) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

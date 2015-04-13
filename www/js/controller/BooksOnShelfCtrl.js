@@ -1,3 +1,4 @@
+"use strict";
 angular.module('bookMonkeyMobile').controller('BooksOnShelfCtrl', function ($scope, $state, $log, BookDataService) {
 
   //don´t forget the promise

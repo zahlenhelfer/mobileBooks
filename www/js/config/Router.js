@@ -35,7 +35,7 @@ angular.module('bookMonkeyMobile')
         url: "/borrowed",
         views: {
           'menuContent': {
-            templateUrl: "templates/borrowed.html",
+            templateUrl: "templates/BooksBorrowed.html",
             controller: 'BooksBorrowedCtrl'
           }
         }

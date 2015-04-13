@@ -18,14 +18,6 @@ angular.module('bookMonkeyMobile')
         $log.log('An error occurred!', error);
       });
     };
-    $scope.sellBook = function (book) {
-      $scope.book.bookStatus = 'sold';
-      BookDataService.sellBook(book).then(function () {
-        $state.go('app.sold');
-      }, function (error) {
-        $log.log('An error occurred!', error);
-      });
-    };
     $scope.deleteBook = function (isbn) {
       BookDataService.deleteBookByIsbn(isbn).then(function () {
         $scope.popover.hide();

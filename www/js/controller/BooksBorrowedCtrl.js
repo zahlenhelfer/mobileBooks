@@ -1,7 +1,6 @@
-/**
- * Created by marcusross on 06.04.15.
- */
-angular.module('bookMonkeyMobile').controller('BooksBorrowedCtrl', function ($scope, $log, BookDataService) {
+"use strict";
+angular.module('bookMonkeyMobile')
+  .controller('BooksBorrowedCtrl', function ($scope, $log, BookDataService) {
 
         //don´t forget the promise :)
         BookDataService.getBorrowedBooks().then(function(res) {
