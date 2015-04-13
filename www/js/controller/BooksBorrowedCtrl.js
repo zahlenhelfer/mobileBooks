@@ -1,14 +1,13 @@
 /**
  * Created by marcusross on 06.04.15.
  */
-angular.module('starter.controllers')
-    .controller('BooksBorrowedCtrl', function ($scope, BookDataService) {
+angular.module('bookMonkeyMobile').controller('BooksBorrowedCtrl', function ($scope, $log, BookDataService) {
 
         //don´t forget the promise :)
         BookDataService.getBorrowedBooks().then(function(res) {
             $scope.books = res.data;
         }, function(error) {
-            console.log('An error occurred!', error);
+          $log.log('An error occurred!', error);
         });
 
         $scope.putBack = function (book) {
