@@ -1,10 +1,10 @@
-"use strict";
-angular.module('bookMonkeyMobile').controller('BooksOnShelfCtrl', function ($scope, $state, $log, BookDataService) {
-  // FIXME: bitte einheitlich machen: .controller auf gleicher zeile wie module oder darunter
+'use strict';
+angular.module('bookMonkeyMobile')
+  .controller('BooksOnShelfController', function ($scope, $state, $log, BookDataService) {
 
   //don´t forget the promise
-  BookDataService.getOnTheShelfBooks().then(function (res) {
-    $scope.books = res.data;
+    BookDataService.getOnTheShelfBooks().then(function (books) {
+      $scope.books = books;
   }, function (error) {
     $log.log('An error occurred!', error);
   });

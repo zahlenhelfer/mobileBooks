@@ -1,108 +1,79 @@
 'use strict';
 angular.module('bookMonkeyMobile')
-  .factory('BookDataService', function ($http) {
+  .factory('BookDataService', function ($http, Config) {
     var srv = {};
 
-    srv._baseUrl = 'http://localhost:4730';
+    var _baseUrl = Config.baseUrl;
+
+    function dataReturn(response) {
+      return response.data;
+    }
 
     // Service implementation
     srv.getBookByIsbn = function (isbn) {
       return $http.get(
-        srv._baseUrl + '/api/books/' + isbn
-      );
+        _baseUrl + '/api/books/' + isbn
+      ).then(dataReturn);
     };
 
     srv.getBooks = function () {
       return $http.get(
-        srv._baseUrl + '/api/books'
-      );
+        _baseUrl + '/api/books'
+      ).then(dataReturn);
     };
 
     srv.getOnTheShelfBooks = function () {
       return $http.get(
-        srv._baseUrl + '/api/booksontheshelf'
-      );
+        _baseUrl + '/api/booksontheshelf'
+      ).then(dataReturn);
     };
 
     srv.getBorrowedBooks = function () {
       return $http.get(
-        srv._baseUrl + '/api/booksborrowed'
-      );
+        _baseUrl + '/api/booksborrowed'
+      ).then(dataReturn);
     };
 
     srv.getSoldBooks = function () {
       return $http.get(
-        srv._baseUrl + '/api/bookssold'
-      );
+        _baseUrl + '/api/bookssold'
+      ).then(dataReturn);
     };
 
     srv.getBooksByStatus = function (status) {
       return $http.get(
-        srv._baseUrl + '/api/booksbystatus/' + status
-      );
-    };
-
-    srv.getTags = function () {
-      return $http.get(
-        srv._baseUrl + '/api/tags'
-      );
+        _baseUrl + '/api/booksbystatus/' + status
+      ).then(dataReturn);
     };
 
     srv.storeBook = function (book) {
       return $http.post(
-        srv._baseUrl + '/api/books', book
-      );
+        _baseUrl + '/api/books', book
+      ).then(dataReturn);
     };
 
     srv.updateBook = function (book) {
       return $http.put(
-        srv._baseUrl + '/api/books/' + book.isbn, book
-      );
+        _baseUrl + '/api/books/' + book.isbn, book
+      ).then(dataReturn);
     };
 
     srv.deleteBookByIsbn = function (isbn) {
       return $http.delete(
-        srv._baseUrl + '/api/books/' + isbn
-      );
+        _baseUrl + '/api/books/' + isbn
+      ).then(dataReturn);
     };
 
     // Public API
     return {
-      getBookByIsbn: function (isbn) {
-        return srv.getBookByIsbn(isbn);
-      },
-      getBooks: function () {
-        return srv.getBooks();
-      },
-      getTags: function () {
-        return srv.getTags();
-      },
-      storeBook: function (book) {
-        return srv.storeBook(book);
-      },
-      updateBook: function (book) {
-        return srv.updateBook(book);
-      },
-      sellBook: function (book) {
-        return srv.updateBook(book);
-      },
-      lendBook: function (book) {
-        return srv.updateBook(book);
-      },
-      getSoldBooks: function () {
-        return srv.getSoldBooks();
-      },
-      getBorrowedBooks: function () {
-        return srv.getBorrowedBooks();
-      },
-      getOnTheShelfBooks: function () {
-        return srv.getOnTheShelfBooks();
-      },
-      getBooksByStatus: function (status) {
-        return srv.getBooksByStatus();
-      },
-      deleteBookByIsbn: function (isbn) {
-        return srv.deleteBookByIsbn(isbn);
-      }
+      getBookByIsbn: srv.getBookByIsbn,
+      deleteBookByIsbn: srv.deleteBookByIsbn,
+      getBooks: srv.getBooks,
+      getOnTheShelfBooks: srv.getOnTheShelfBooks,
+      storeBook: srv.storeBook,
+      updateBook: srv.updateBook,
+      lendBook: srv.updateBook,
+      getBorrowedBooks: srv.getBorrowedBooks,
+      getBooksByStatus: srv.getBooksByStatus
     };
   });

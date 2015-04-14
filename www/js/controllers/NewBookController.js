@@ -1,5 +1,6 @@
+'use strict';
 angular.module('bookMonkeyMobile')
-  .controller('NewBookCtrl', function ($scope, $log, $state, BookDataService) {
+  .controller('NewBookController', function ($scope, $log, $state, BookDataService) {
 
     $scope.newBook = {};
     $scope.submitBtnLabel = 'save book';

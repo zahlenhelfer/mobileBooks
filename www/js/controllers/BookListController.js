@@ -1,19 +1,17 @@
-// FIXME: best practive ist der einsatz eine code quality tools, z.B. jslint.
-// manchmal benutzt du double quotes, manchmal single
-"use strict";
+'use strict';
 angular.module('bookMonkeyMobile')
-  .controller('BookListCtrl', function ($scope, $log, $state, BookDataService) {
+  .controller('BookListController', function ($scope, $log, $state, BookDataService) {
 
     //don´t forget the promise :)
-    BookDataService.getBooks().then(function (res) {
-      $scope.books = res.data;
+    BookDataService.getBooks().then(function (books) {
+      $scope.books = books;
     }, function (error) {
       $log.log('An error occurred!', error);
     });
 
     $scope.doRefresh = function () {
-      BookDataService.getBooks().then(function (res) {
-        $scope.books = res.data;
+      BookDataService.getBooks().then(function (books) {
+        $scope.books = books;
       }, function (error) {
         $log.log('An error occurred!', error);
       }).finally(function () {

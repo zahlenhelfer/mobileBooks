@@ -17,7 +17,7 @@ angular.module('bookMonkeyMobile')
         views: {
           'menuContent': {
             templateUrl: "templates/BooksOnShelf.html",
-            controller: 'BooksOnShelfCtrl'
+            controller: 'BooksOnShelfController'
           }
         }
       })
@@ -26,7 +26,7 @@ angular.module('bookMonkeyMobile')
         views: {
           'menuContent': {
             templateUrl: 'templates/BookDetail.html',
-            controller: 'BookDetailCtrl'
+            controller: 'BookDetailController'
           }
         }
       })
@@ -36,7 +36,7 @@ angular.module('bookMonkeyMobile')
         views: {
           'menuContent': {
             templateUrl: "templates/BooksBorrowed.html",
-            controller: 'BooksBorrowedCtrl'
+            controller: 'BooksBorrowedController'
           }
         }
       })
@@ -45,7 +45,7 @@ angular.module('bookMonkeyMobile')
         views: {
           'menuContent': {
             templateUrl: "templates/CoverGallery.html",
-            controller: 'cameraCtrl'
+            controller: 'CameraController'
           }
         }
       })
@@ -54,7 +54,7 @@ angular.module('bookMonkeyMobile')
         views: {
           'menuContent': {
             templateUrl: "templates/NewBook.html",
-            controller: 'NewBookCtrl'
+            controller: 'NewBookController'
           }
         }
       })
@@ -63,7 +63,7 @@ angular.module('bookMonkeyMobile')
         views: {
           'menuContent': {
             templateUrl: "templates/BookList.html",
-            controller: 'BookListCtrl'
+            controller: 'BookListController'
           }
         }
       });

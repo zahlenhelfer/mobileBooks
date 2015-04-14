@@ -1,14 +1,12 @@
-"use strict";
+'use strict';
 angular.module('bookMonkeyMobile')
-  .controller('BookDetailCtrl', function ($scope, $stateParams, $state, $log, $ionicPopover, BookDataService) {
-    // FIXME: Ctrl wird mittlerweile als Controller ausgeschrieben
+  .controller('BookDetailController', function ($scope, $stateParams, $state, $log, $ionicPopover, BookDataService) {
 
     //don´t forget the promise :)
-    BookDataService.getBookByIsbn($stateParams.bookIsbn).then(function (res) {
-      // FIXME: data schon direkt über den Service kapseln
-      $scope.book = res.data;
+    BookDataService.getBookByIsbn($stateParams.bookIsbn).then(function (book) {
+      $scope.book = book;
     }, function (error) {
-      $log.log("------------");
+      $log.log('------------');
       $log.log('An error occurred!', error);
     });
 
@@ -20,6 +18,7 @@ angular.module('bookMonkeyMobile')
         $log.log('An error occurred!', error);
       });
     };
+
     $scope.deleteBook = function (isbn) {
       BookDataService.deleteBookByIsbn(isbn).then(function () {
         $scope.popover.hide();

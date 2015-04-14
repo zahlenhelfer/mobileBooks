@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 angular.module('bookMonkeyMobile')
-  .controller('GpsCtrl', function ($cordovaGeolocation, $log) {
+  .controller('GpsController', function ($cordovaGeolocation, $log) {
   var posOptions = {timeout: 10000, enableHighAccuracy: false};
   $cordovaGeolocation
     .getCurrentPosition(posOptions)

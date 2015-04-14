@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 angular.module('bookMonkeyMobile')
-  .controller('cameraCtrl', function ($scope, $log, $cordovaCamera, $cordovaFile) {
+  .controller('CameraController', function ($scope, $log, $cordovaCamera, $cordovaFile) {
 // 1
     $scope.images = [];
 
@@ -53,12 +53,12 @@ angular.module('bookMonkeyMobile')
         }
 
         function fail(error) {
-          $log.log("fail: " + error.code);
+          $log.log('fail: ' + error.code);
         }
 
         function makeid() {
-          var text = "";
-          var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+          var text = '';
+          var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
           for (var i = 0; i < 5; i++) {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
@@ -79,9 +79,8 @@ angular.module('bookMonkeyMobile')
 
     $scope.images = [];
     $scope.loadImages = function () {
-      // FIXME: best practice - von hinten runterzählen - grund: teilnehmer dabei informieren, dass man das so machen muss, wenn man elemente in einer schleife löscht.
-      for (var i = 0; i < 100; i++) {
-        $scope.images.push({id: i, src: "http://placehold.it/50x50"});
+      for (var i = 100; i > 0; i--) {
+        $scope.images.push({id: i, src: 'http://placehold.it/50x50'});
       }
     };
 
