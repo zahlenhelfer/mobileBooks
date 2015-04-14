@@ -1,3 +1,5 @@
+// FIXME: best practive ist der einsatz eine code quality tools, z.B. jslint.
+// manchmal benutzt du double quotes, manchmal single
 "use strict";
 angular.module('bookMonkeyMobile')
   .controller('BookListCtrl', function ($scope, $log, $state, BookDataService) {

@@ -1,9 +1,11 @@
 "use strict";
 angular.module('bookMonkeyMobile')
   .controller('BookDetailCtrl', function ($scope, $stateParams, $state, $log, $ionicPopover, BookDataService) {
+    // FIXME: Ctrl wird mittlerweile als Controller ausgeschrieben
 
     //don´t forget the promise :)
     BookDataService.getBookByIsbn($stateParams.bookIsbn).then(function (res) {
+      // FIXME: data schon direkt über den Service kapseln
       $scope.book = res.data;
     }, function (error) {
       $log.log("------------");

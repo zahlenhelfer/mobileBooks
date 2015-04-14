@@ -5,6 +5,7 @@ angular.module('bookMonkeyMobile')
     $scope.images = [];
 
     $scope.addImage = function () {
+      // FIXME: Das ist sehr viel Logik im Controller
       // 2
       var options = {
         destinationType: Camera.DestinationType.FILE_URI,
@@ -78,6 +79,7 @@ angular.module('bookMonkeyMobile')
 
     $scope.images = [];
     $scope.loadImages = function () {
+      // FIXME: best practice - von hinten runterzählen - grund: teilnehmer dabei informieren, dass man das so machen muss, wenn man elemente in einer schleife löscht.
       for (var i = 0; i < 100; i++) {
         $scope.images.push({id: i, src: "http://placehold.it/50x50"});
       }

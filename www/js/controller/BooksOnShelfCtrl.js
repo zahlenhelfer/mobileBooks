@@ -1,5 +1,6 @@
 "use strict";
 angular.module('bookMonkeyMobile').controller('BooksOnShelfCtrl', function ($scope, $state, $log, BookDataService) {
+  // FIXME: bitte einheitlich machen: .controller auf gleicher zeile wie module oder darunter
 
   //don´t forget the promise
   BookDataService.getOnTheShelfBooks().then(function (res) {

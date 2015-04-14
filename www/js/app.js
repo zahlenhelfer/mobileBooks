@@ -1,7 +1,10 @@
 // Ionic Starter App
 'use strict';
 angular.module('bookMonkeyMobile', ['ngCordova', 'ionic', 'angular.filter'])
+  // FIXME: best practice - jede abhängigkeit in eigener zeile (merge hell im team)
+
   .run(function ($ionicPlatform, $rootScope, $log) {
+    // FIXME: run block in config verzeichnis verschieben. z.b. config/ionic.js
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -22,3 +25,4 @@ angular.module('bookMonkeyMobile', ['ngCordova', 'ionic', 'angular.filter'])
         // logic
       });
   });
+
