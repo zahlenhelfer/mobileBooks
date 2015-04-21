@@ -1,49 +1,52 @@
 <ion-view view-title="new Book">
-    <ion-content class="padding">
+  <ion-content class="list">
 
-        <label class="item item-input">
-            <span class="input-label">Title</span>
-            <input type="text" ng-model="newBook.title" required>
-        </label>
-        <label class="item item-input">
-            <span class="input-label">Subtitle</span>
-            <input type="text" ng-model="newBook.subtitle" required>
-        </label>
-        <label class="item item-input">
-            <span class="input-label">ISBN</span>
-            <input type="number" ng-model="newBook.isbn" required>
-        </label>
-        <label class="item item-input">
-            <span class="input-label">Abstract</span>
-            <textarea placeholder="Abstract" ng-model="newBook.abstract"></textarea>
-        </label>
-        <label class="item item-input">
-            <span class="input-label">Pages</span>
-            <input type="number" ng-model="newBook.numPages">
-        </label>
-        <label class="item item-input">
-            <span class="input-label">Author</span>
-            <input type="text" ng-model="newBook.author">
-        </label>
-        <button class="button icon-left ion-camera button-block button-positive" ng-model="newBook.cover">
-            take a picture
-        </button>
-        <label class="item item-input">
-            <span class="input-label">Publisher</span>
-            <input type="text" ng-model="newBook.publisher.name">{{newBook.publisher}}
-        </label>
+    <label class="item item-input">
+      <span class="input-label">Title</span>
+      <input type="text" ng-model="newBook.title" required>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Subtitle</span>
+      <input type="text" ng-model="newBook.subtitle" required>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">ISBN</span>
+      <input type="number" ng-model="newBook.isbn" required>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Abstract</span>
+      <textarea placeholder="Abstract" ng-model="newBook.abstract"></textarea>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Pages</span>
+      <input type="number" ng-model="newBook.numPages">
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Author</span>
+      <input type="text" ng-model="newBook.author">
+    </label>
+    <button class="button icon-left ion-camera button-block button-positive"
+            ng-model="newBook.cover" ng-click="takePictureBase64()">
+      take a picture
+    </button>
+    <img ng-show="newBook.cover !== undefined" ng-src="{{newBook.cover}}">
+    <label class="item item-input">
+      <span class="input-label">Publisher</span>
+      <input type="text" ng-model="newBook.publisher.name">
+    </label>
 
-        <label class="item item-input">
-            <span class="input-label">Publisher Url</span>
-            <input type="text" ng-model="newBook.publisher.url">
-        </label>
+    <label class="item item-input">
+      <span class="input-label">Publisher Url</span>
+      <input type="text" ng-model="newBook.publisher.url">
+    </label>
 
-        <div class="button-bar">
-            <button ng-click="submitBook()" class="button button-energized"
-                    ng-disabled="bookForm.$invalid">{{ submitBtnLabel }}
-            </button>
-            <button ng-click="cancelSubmit()" class="button button-assertive">
-                abort
-            </button>
-    </ion-content>
+    <div class="button-bar">
+      <button ng-click="submitBook()" class="button button-energized">
+        create book
+      </button>
+      <button ng-click="cancelSubmit()" class="button button-assertive">
+        abort
+      </button>
+
+  </ion-content>
 </ion-view>

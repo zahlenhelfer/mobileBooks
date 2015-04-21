@@ -65,7 +65,6 @@ SERVER.__initBooks = [
     }
 ];
 
-
 // some helper functions
 SERVER.deepCopy = function (obj) {
     // quick and dirty deep copy

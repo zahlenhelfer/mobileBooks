@@ -7,16 +7,16 @@ angular.module('bookMonkeyMobile')
     $stateProvider
 
       .state('app', {
-        url: "/app",
+        url: '/app',
         abstract: true,
-        templateUrl: "templates/SideMenu.html"
+        templateUrl: 'templates/SideMenu.html'
       })
 
       .state('app.ontheshelf', {
-        url: "/ontheshelf",
+        url: '/ontheshelf',
         views: {
           'menuContent': {
-            templateUrl: "templates/BooksOnShelf.html",
+            templateUrl: 'templates/BooksOnShelf.html',
             controller: 'BooksOnShelfController'
           }
         }
@@ -32,37 +32,37 @@ angular.module('bookMonkeyMobile')
       })
 
       .state('app.borrowed', {
-        url: "/borrowed",
+        url: '/borrowed',
         views: {
           'menuContent': {
-            templateUrl: "templates/BooksBorrowed.html",
+            templateUrl: 'templates/BooksBorrowed.html',
             controller: 'BooksBorrowedController'
           }
         }
       })
       .state('app.camera', {
-        url: "/camera",
+        url: '/camera',
         views: {
           'menuContent': {
-            templateUrl: "templates/CoverGallery.html",
+            templateUrl: 'templates/CoverGallery.html',
             controller: 'CameraController'
           }
         }
       })
       .state('app.newbook', {
-        url: "/newbook",
+        url: '/newbook',
         views: {
           'menuContent': {
-            templateUrl: "templates/NewBook.html",
+            templateUrl: 'templates/NewBook.html',
             controller: 'NewBookController'
           }
         }
       })
       .state('app.all', {
-        url: "/all",
+        url: '/all',
         views: {
           'menuContent': {
-            templateUrl: "templates/BookList.html",
+            templateUrl: 'templates/BookList.html',
             controller: 'BookListController'
           }
         }

@@ -14,6 +14,7 @@ angular.module('bookMonkeyMobile')
       $scope.book.bookStatus = 'borrow';
       BookDataService.lendBook(book).then(function () {
         $state.go('app.borrowed');
+        $log.log('lended the book!');
       }, function (error) {
         $log.log('An error occurred!', error);
       });

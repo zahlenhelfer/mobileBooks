@@ -73,6 +73,7 @@ angular.module('bookMonkeyMobile')
       storeBook: srv.storeBook,
       updateBook: srv.updateBook,
       lendBook: srv.updateBook,
+      putBackBook: srv.updateBook,
       getBorrowedBooks: srv.getBorrowedBooks,
       getBooksByStatus: srv.getBooksByStatus
     };

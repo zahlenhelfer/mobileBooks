@@ -10,12 +10,13 @@ angular.module('bookMonkeyMobile')
     });
 
     $scope.putBack = function (book) {
-      $scope.book.bookStatus = 'borrow';
       BookDataService.putBack(book).then(function () {
         $scope.books[$scope.books.indexOf(book)].bookStatus = 'shelf';
+        $log.log('I put the book back');
         $state.go('app.ontheshelf');
       }, function (error) {
         $log.log('An error occurred!', error);
       });
     };
+
   });

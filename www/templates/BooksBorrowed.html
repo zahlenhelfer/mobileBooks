@@ -1,24 +1,24 @@
 <ion-view view-title="borrowed books">
-    <ion-nav-title>
-        <h1 class="title">borrowed Books</h1>
-    </ion-nav-title>
-    <ion-content>
-        <ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="book in books"
-                      type="item-text-wrap" href="#/app/ontheshelf/{{book.isbn}}">
-                <img ng-src="{{book.cover}}">
+  <ion-nav-title>
+    <h1 class="title">borrowed Books</h1>
+  </ion-nav-title>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="book in books"
+                type="item-text-wrap" href="#/app/ontheshelf/{{book.isbn}}">
+        <img ng-src="{{book.cover}}">
 
-                <h2>{{book.title}}</h2>
+        <h2>{{book.title}}</h2>
 
-                <p>{{book.subtitle}}</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
+        <p>{{book.subtitle}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
 
-                <ion-option-button class="button-balanced" ng-click="putBack(book)">
-                    Back to Shelf
-                </ion-option-button>
-            </ion-item>
-        </ion-list>
-    </ion-content>
+        <ion-option-button class="button-balanced" ng-click="putBack(book)">
+          Back fo Shelf
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
 </ion-view>
 
 

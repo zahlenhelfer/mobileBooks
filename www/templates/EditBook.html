@@ -1,0 +1,48 @@
+<ion-view view-title="edit Book">
+    <ion-content class="padding">
+
+        <label class="item item-input">
+            <span class="input-label">Title</span>
+            <input type="text" ng-model="newBook.title" required></input>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Subtitle</span>
+            <input type="text" ng-model="newBook.subtitle" required></input>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">ISBN</span>
+            <input type="number" ng-model="newBook.isbn" required></input>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Abstract</span>
+            <textarea placeholder="Abstract" ng-model="newBook.abstract">{{book.abstract}}</textarea>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Pages</span>
+            <input type="number" ng-model="newBook.numPages">{{book.numPages}}</input>
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Author</span>
+            <input type="text" ng-model="newBook.author">{{book.abstract}}</input>
+        </label>
+        <button class="button icon-left ion-camera button-block button-positive" ng-model="newBook.cover">
+            take a picture
+        </button>
+        <label class="item item-input">
+            <span class="input-label">Publisher</span>
+            <input type="text" ng-model="newBook.publisher.name">{{newBook.publisher.name}}
+        </label>
+
+        <label class="item item-input">
+            <span class="input-label">Publisher Url</span>
+            <input type="text" ng-model="newBook.publisher.url">{{newBook.publisher.url}}</input>
+        </label>
+
+        <div class="button-bar">
+            <button ng-click="submitBook()" class="button button-energized">
+            </button>
+            <button ng-click="cancelSubmit()" class="button button-assertive">
+                abort
+            </button>
+    </ion-content>
+</ion-view>

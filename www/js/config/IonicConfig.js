@@ -1,5 +1,5 @@
 angular.module('bookMonkeyMobile')
-  .constant('Config', {baseUrl: 'http://localhost:4730'})
+  .constant('Config', {baseUrl: 'http://192.168.178.60:4730'})
   .run(function ($ionicPlatform, $rootScope, $log) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
