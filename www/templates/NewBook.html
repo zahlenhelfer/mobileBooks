@@ -26,7 +26,7 @@
       <input type="text" ng-model="newBook.author">
     </label>
     <button class="button icon-left ion-camera button-block button-positive"
-            ng-model="newBook.cover" ng-click="takePictureBase64()">
+            ng-model="newBook.cover" ng-click="takePicture()">
       take a picture
     </button>
     <img ng-show="newBook.cover !== undefined" ng-src="{{newBook.cover}}">
