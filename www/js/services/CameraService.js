@@ -2,9 +2,7 @@
 angular.module('bookMonkeyMobile')
   .factory('CameraService', function ($log, $cordovaCamera) {
 
-    var srv = {};
-
-    srv.takePictureBase64 = function () {
+    var takePictureBase64 = function () {
       $log.log('Starting the camera-plugin');
 
       var options;
@@ -32,6 +30,6 @@ angular.module('bookMonkeyMobile')
 
     // Public API
     return {
-      takePictureBase64: srv.takePictureBase64
+      takePictureBase64: takePictureBase64
     };
   });
