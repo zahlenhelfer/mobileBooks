@@ -1,6 +1,6 @@
 'use strict';
 angular.module('bookMonkeyMobile')
-  .controller('CameraController', function ($scope, $log) {
+  .controller('BookCoverGalleryController', function ($scope, $log) {
 
     $scope.images = [];
     $scope.loadImages = function () {

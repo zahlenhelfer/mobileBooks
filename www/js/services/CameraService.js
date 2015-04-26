@@ -20,13 +20,12 @@ angular.module('bookMonkeyMobile')
       };
 
       $cordovaCamera.getPicture(options).then(function (imageData) {
-        $log.log('Bilddaten sind base64 gestreamt');
+        $log.log('Bilddaten sind base64');
         return 'data:image/jpeg;base64,' + imageData;
       }, function (err) {
-        $log.log(err);
+        $log.log('Fehler im CameraSerivce:'+ err);
         return err;
       });
-
     };
 
     // Public API

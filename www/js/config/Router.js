@@ -40,12 +40,12 @@ angular.module('bookMonkeyMobile')
           }
         }
       })
-      .state('app.camera', {
-        url: '/camera',
+      .state('app.cover-gallery', {
+        url: '/cover-gallery',
         views: {
           'menuContent': {
             templateUrl: 'templates/CoverGallery.html',
-            controller: 'CameraController'
+            controller: 'BookCoverGalleryController'
           }
         }
       })
