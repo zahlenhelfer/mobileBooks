@@ -7,10 +7,13 @@ angular.module('bookMonkeyMobile')
     $scope.submitBtnLabel = 'save book';
 
     $scope.takePicture = function () {
-      $log.log('NewBookController - takePictureBase64 vom service aufrufen');
+      $log.log('NewBookController - takePictureBase64 vom Service aufrufen');
+      $log.log(JSON.stringify(CameraService));
+      $log.log('-----------');
 
       CameraService.takePictureBase64().then(function (imgdata) {
         $scope.newBook.cover = imgdata;
+        $log.log($scope.newBook.cover);
       }, function (error) {
         $log.log('An error occurred!', error);
       });

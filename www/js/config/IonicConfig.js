@@ -1,5 +1,5 @@
 angular.module('bookMonkeyMobile')
-  .constant('Config', {baseUrl: 'http://192.168.178.60:4730'})
+  .constant('Config', {baseUrl: 'http://192.168.90.145:4730'})
   .run(function ($ionicPlatform, $rootScope, $log) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -15,9 +15,9 @@ angular.module('bookMonkeyMobile')
     $log.log('Starte den State-Logger');
     $rootScope.$on('$stateChangeStart',
       function (event, toState, toParams, fromState, fromParams) {
-        $log.log("------------")
-        $log.log("FromState", fromState);
-        $log.log("toState", toState);
+        $log.log('------------');
+        $log.log('FromState', fromState);
+        $log.log('toState', toState);
         // logic
       });
   });

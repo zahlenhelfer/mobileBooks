@@ -29,7 +29,7 @@
             ng-model="newBook.cover" ng-click="takePicture()">
       take a picture
     </button>
-    <img ng-show="newBook.cover !== undefined" ng-src="{{newBook.cover}}">
+    <img ng-show="newBook.cover !== undefined" ng-src="newBook.cover">
     <label class="item item-input">
       <span class="input-label">Publisher</span>
       <input type="text" ng-model="newBook.publisher.name">
